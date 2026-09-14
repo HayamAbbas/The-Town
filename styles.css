@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #444;
+}
+
+/* ==========================================
+   1. HERO SECTION
+   ========================================== */
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), 
+              url('https://picsum.photos/id/1043/1200/800') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 1.2rem;
+  color: white;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* position 1% */
+}
+
+.logo {
+  font-family: 'Georgia', cursive, serif;
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+.menu-toggle {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 1.5rem;
+  height: 2px;
+  background-color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+ background-color: rgba(0, 0, 0, 0.85);
+  padding: 15px 20px;
+  border-radius: 6px;
+  flex-direction: column;
+  gap: 0.8rem;
+  z-index: 100;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.nav-links a.active {
+  color: #6c8eff;
+}
+#menu-toggle:checked~ .nav-links {
+  display: flex;
+}
+
+.hero-content {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.hero-content .subtitle {
+  font-size: 1.2rem;
+}
+
+.hero-content .author a {
+  color: #4869ee;
+  text-decoration: none;
+}
+
+/* ==========================================
+   2. INTRO SECTION
+   ========================================== */
+.intro-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.intro-container {
+  width: 90%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.image-box {
+  width: 100%;
+  height: auto;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-box {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.text-box h2 {
+  color: #4869ee;
+  font-size: 2.2rem;
+}
+
+.text-box p {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #666;
+}
+
+.text-box a {
+  color: #1a73e8;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.btn-read-more {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* ==========================================
+   3. WORKS GRADIENT SECTION
+   ========================================== */
+.works-section {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #df8772 0%, #766a8e 50%, #52638f 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.works-container {
+  width: 90%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.work-card {
+  width: 100%;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.work-card h2 {
+  font-size: 2.2rem;
+}
+
+.work-card .btn-show {
+  color: #1a73e8;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.work-card p {
+  width: 95%;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ==========================================
+   4. GALLERY / OUR WORK SECTION
+   ========================================== */
+.our-work-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  gap: 2rem;
+}
+
+.our-work-header {
+  width: 90%;
+  max-width: 650px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.our-work-header h2 {
+  color: #4869ee;
+  font-size: 2.2rem;
+}
+
+.our-work-header p {
+  color: #666;
+  line-height: 1.5;
+}
+
+.gallery-grid {
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================
+   5. CONTACT SECTION & FOOTER
+   ========================================== */
+.contact-section {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+              url('https://picsum.photos/id/1043/1200/800') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  color: white;
+}
+
+.contact-container {
+  width: 90%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.8rem;
+}
+
+.contact-container h2 {
+  font-size: 2.4rem;
+}
+
+.divider {
+  width: 80%;
+  border: 0;
+  height: 2px;
+  background-color: white;
+}
+
+.contact-text {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+.subscribe-form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.subscribe-form input {
+  width: 65%;
+  padding: 0.7rem 1rem;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+}
+
+.subscribe-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.subscribe-form button {
+  width: 30%;
+  padding: 0.7rem 1rem;
+  background-color: white;
+  color: #007bff;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 1.5rem;
+}
+
+.copyright a {
+  color: #4869ee;
+  text-decoration: none;
+}
